@@ -1,0 +1,44 @@
+void main(List<String> args) {
+   Vehiculo Elpontiac = Vehiculo();
+   Elpontiac.llantas = 4;
+   Elpontiac.Color = "Rojo";
+   Elpontiac.Modelo = "2015";
+   Elpontiac.Marca = "Pontiac";
+   Elpontiac.showVehiculo(); 
+ }
+
+class Vehiculo {
+  int? _llantas;
+  String? _Color;
+  String? _Modelo;
+  String? _Marca;
+
+  void set llantas(int llantas) => _llantas = llantas;
+  void set Color(String Color) => _Color = Color;
+  void set Modelo(String Modelo) => _Modelo = Modelo;
+  void set Marca(String Marca) => _Marca = Marca;
+
+  int get llantas => _llantas!;
+  String get Color => _Color!;
+  String get Modelo => _Modelo!;
+  String get Marca => _Marca!;
+
+  void arrancar(){
+    print("El carro arrancó");
+  }
+
+  void correr(){
+    print("El carro corrió");
+  }
+
+  void frenar(){
+    print("Freno el carro");
+  }
+
+  void showVehiculo(){
+    print("Marca : ${_Marca}");
+    print("Modelo : ${_Modelo}");
+    print("Color : ${_Color}"); 
+    print("Numero de llantas : ${_llantas}");
+  }
+}
